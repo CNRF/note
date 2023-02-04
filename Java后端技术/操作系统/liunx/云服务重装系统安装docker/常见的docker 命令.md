@@ -1,0 +1,58 @@
+设置开机自启 
+
+```shell
+docker update --restart=always xxx
+## 关闭开机自启动
+docker update --restart=no 容器id 
+```
+
+查看以下载的lastest的具体版本
+
+```shell
+docker image inspect (docker image名称):latest|grep -i version
+#  获取当前容器的ip地址
+docker inspect --format '{{ .NetworkSettings.IPAddress }}' 5484926c91f5
+#进入运行的容器内部
+docker exec -it b097b7b701e1  /bin/bash
+
+docker logs -f -t --tail 100 datacenter
+```
+
+docker基本命令
+
+```shell
+#查看所有镜像 
+docker images
+
+#删除镜像(会提示先停止使用中的容器) 
+docker rmi 镜像name/镜像id
+
+#查看所有容器 
+docker ps -a
+
+#查看容器运行日志 
+docker logs 容器名称/容器id
+
+#停止容器运行 
+docker stop 容器name/容器id
+
+#终止容器后运行 
+docker start 容器name/容器id
+
+#容器重启
+docker restart 容器name/容器id
+
+#删除容器 
+docker rm 容器name/容器id
+
+#强制移除容器  
+docker rm -f  容器name/容器id
+
+#查看网络列表
+docker network ls
+
+#查看网络详情
+docker network inspect  网络id()
+docker network inspect fa88534c3537
+```
+

@@ -1,0 +1,13 @@
+{
+  "attachmentFolderPath": "./image",
+  "promptDelete": false,
+  "showLineNumber": true,
+  "spellcheck": true,
+  "defaultViewMode": "preview",
+  "useMarkdownLinks": true,
+  "foldIndent": false,
+  "lineWrap": true,
+  "fileSortOrder": "alphabetical",
+  "alwaysUpdateLinks": true,
+  "newLinkFormat": "relative"
+}
