@@ -2,7 +2,7 @@
 
 ```shell
 #获取镜像
-docker pull redis:6.0.8
+docker pull redis:7.0.9
 #安装指定版本redis（无版本号默认为最新版本）
 docker pull redis:4.0.9
 
@@ -20,16 +20,19 @@ docker search redis 查看镜像来源
 **3.新建映射文件路径**
 
 ```shell
-mkdir /var/redis
+mkdir -p /app/redis
 
-vi /var/redis/redis.conf
+vi /app/redis/redis.conf
 #将上面配置复制到此文件
 ```
 
 **4.启动redis**
 
 ```shell
-docker run --restart always -p 6379:6379 --name dockerredis --privileged=true -v /var/redis/redis.conf:/etc/redis/redis.conf -v /var/redis/data:/data -d redis:6.0.8 redis-server /etc/redis/redis.conf --appendonly yes
+docker run --restart always -p 6379:6379 --name redis --privileged=true -v /app/redis/redis.conf:/etc/redis/redis.conf -v /app/redis/data:/data -d redis:7.0.9 redis-server /etc/redis/redis.conf  --appendonly yes
+
+firewall-cmd --zone=public --add-port=6379/tcp --permanent
+firewall-cmd --reload
 ```
 
 命令解释说明：

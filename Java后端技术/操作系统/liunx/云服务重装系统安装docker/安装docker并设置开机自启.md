@@ -1,4 +1,4 @@
-```
+```shell
 #更新yum源
 yum update
 #安装docker

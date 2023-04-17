@@ -1,12 +1,31 @@
-设置开机自启 
+## 设置开机自启 
 
 ```shell
 docker update --restart=always xxx
 ## 关闭开机自启动
-docker update --restart=no 容器id 
+docker update --restart=no 容器id
 ```
 
-查看以下载的lastest的具体版本
+## 修改docker默认镜像位置
+
+```shell
+# 关闭服务
+systemctl stop docker
+# 编辑文本 添加一下内容
+vim /etc/docker/daemon.json
+
+{
+    "graph": "/exapp/docker_data"
+}
+
+# 重启服务
+systemctl start docker
+
+```
+
+
+
+## 查看以下载的lastest的具体版本
 
 ```shell
 docker image inspect (docker image名称):latest|grep -i version
@@ -18,7 +37,7 @@ docker exec -it b097b7b701e1  /bin/bash
 docker logs -f -t --tail 100 datacenter
 ```
 
-docker基本命令
+## docker基本命令
 
 ```shell
 #查看所有镜像 
@@ -54,5 +73,24 @@ docker network ls
 #查看网络详情
 docker network inspect  网络id()
 docker network inspect fa88534c3537
+```
+
+## 解决办法：重建docker0网络恢复
+
+```shell
+#按照进程名杀死docker进程
+pkill docker
+#清空防火墙规则-清空nat表的所有链
+iptables -t nat -F
+#查看定义规则的详细信息
+iptables -L -n -v
+#关闭docker0接口
+ifconfig docker0 down
+#删除docker0接口
+brctl delbr docker0
+#重启docker
+ systemctl restart docker
+#查看是否启用
+docker ps -a
 ```
 

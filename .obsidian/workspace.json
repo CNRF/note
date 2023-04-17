@@ -1,0 +1,184 @@
+{
+  "main": {
+    "id": "b020af5f5fd89735",
+    "type": "split",
+    "children": [
+      {
+        "id": "c4370248cc9bb0ca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e5ab11255d2a8e42",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "前端相关/JavaScript/19-jQuery操作.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b4287072d72c296d",
+    "type": "split",
+    "children": [
+      {
+        "id": "2bcd28e45e12e195",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3d4a64af3adfcc94",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a3ad382223fc3b3a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9a1e94f406c1dc4f",
+    "type": "split",
+    "children": [
+      {
+        "id": "f838a692f8c015af",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "04c7780e1439614b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "前端相关/JavaScript/19-jQuery操作.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": true,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e3a51d0faee78a82",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "前端相关/JavaScript/19-jQuery操作.md",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "d41b540bc14b81d0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "前端相关/JavaScript/19-jQuery操作.md"
+              }
+            }
+          },
+          {
+            "id": "1d07e057956bd761",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "a6ecff86fcb04a3e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "前端相关/JavaScript/19-jQuery操作.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 311.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "canvas:新建白板": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "random-note:开始漫游笔记": false,
+      "workspaces:管理工作区布局": false
+    }
+  },
+  "active": "e5ab11255d2a8e42",
+  "lastOpenFiles": [
+    "前端相关/JavaScript/21-同源及跨域.md",
+    "前端相关/vue/未命名.md",
+    "前端相关/JavaScript/14-对象的基本操作.md",
+    "前端相关/JavaScript/10-函数.md",
+    "前端相关/JavaScript/06-运算符.md",
+    "前端相关/JavaScript/03-标识符、关键字、保留字.md",
+    "Java后端技术/操作系统/liunx/云服务重装系统安装docker/常见的docker 命令.md",
+    "前端相关/JavaScript/01-JS基本概念.md",
+    "大数据相关/Hadoop/大数据启蒙.md",
+    "前端相关/JavaScript/20-AJAX.md",
+    "前端相关/JavaScript/19-jQuery操作.md",
+    "前端相关/JavaScript/18-jQuery的介绍和选择器.md",
+    "前端相关/JavaScript/17-事件.md",
+    "前端相关/JavaScript/16-DOM简介及操作.md",
+    "前端相关/JavaScript/15-事件简介.md",
+    "前端相关/JavaScript/13-闭包.md",
+    "前端相关/JavaScript/12-this指向.md",
+    "前端相关/JavaScript/11-作用域.md",
+    "前端相关/JavaScript/09-内置对象.md",
+    "前端相关/JavaScript/08-基本包装类型.md",
+    "前端相关/JavaScript/07-流程控制语句.md",
+    "前端相关/JavaScript/05-基本数据类型.md",
+    "前端相关/JavaScript/04-变量基本数据类型.md",
+    "前端相关/JavaScript/02-常量和变量.md",
+    "前端相关/html和css/08-定位属性.md",
+    "前端相关/html和css/07-浮动.md",
+    "Java后端技术/设计模式/设计模式之禅（第2版）-5.pdf",
+    "image",
+    "Java后端技术/网络到分布式（集群高并发redis）/高并发负载均衡/网络高并发负载均衡.svg"
+  ]
+}

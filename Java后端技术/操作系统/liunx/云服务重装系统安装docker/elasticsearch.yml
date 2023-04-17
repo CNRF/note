@@ -1,0 +1,5 @@
+xpack.ml.enabled: false
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+network.bind_host: 0.0.0.0
+discovery.seed_hosts: ["0.0.0.0", "[::1]"]
