@@ -1,4 +1,4 @@
-## 设置开机自启 
+## 设置开机自启
 
 ```shell
 docker update --restart=always xxx
@@ -15,7 +15,7 @@ systemctl stop docker
 vim /etc/docker/daemon.json
 
 {
-    "graph": "/exapp/docker_data"
+    "graph": "/user/docker_data"
 }
 
 # 重启服务
