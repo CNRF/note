@@ -20,19 +20,28 @@ docker search redis 查看镜像来源
 **3.新建映射文件路径**
 
 ```shell
-mkdir -p /app/redis
+mkdir -p /usr/redis
 
-vi /app/redis/redis.conf
+vi /usr/redis/redis.conf
 #将上面配置复制到此文件
 ```
 
 **4.启动redis**
 
 ```shell
-docker run --restart always -p 6379:6379 --name redis --privileged=true -v /app/redis/redis.conf:/etc/redis/redis.conf -v /app/redis/data:/data -d redis:7.0.9 redis-server /etc/redis/redis.conf  --appendonly yes
+docker run --restart always \
+-p 6379:6379 \
+--name redis \
+--privileged=true \
+-v /usr/redis/redis.conf:/etc/redis/redis.conf \
+-v /usr/redis/data:/data \
+-d redis:7.0.9 redis-server /etc/redis/redis.conf \
+--appendonly yes
 
 firewall-cmd --zone=public --add-port=6379/tcp --permanent
 firewall-cmd --reload
+
+
 ```
 
 命令解释说明：

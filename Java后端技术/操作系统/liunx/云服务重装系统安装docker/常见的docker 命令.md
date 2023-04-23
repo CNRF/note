@@ -15,12 +15,22 @@ systemctl stop docker
 vim /etc/docker/daemon.json
 
 {
-    "graph": "/user/docker_data"
+    "graph": "/usr/docker_data"
 }
 
 # 重启服务
 systemctl start docker
 
+```
+
+## Docker 开启远程连接
+
+![image-20230421212131727](https://raw.githubusercontent.com/CNRF/noteImage/main/image/202304212121773.png)
+
+```
+vi /usr/lib/systemd/system/docker.service
+
+-H tcp://0.0.0.0:2375 -H unix://var/run/docker.sock 
 ```
 
 
