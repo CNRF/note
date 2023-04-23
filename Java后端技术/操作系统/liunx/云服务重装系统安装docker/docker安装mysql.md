@@ -25,8 +25,16 @@ docker images
 
 4、**启动mysql实例**
 
-```
-docker run --restart always --name dockermysql -v /var/mysql/log:/var/log/mysql -v /var/mysql/data:/var/lib/mysql -v /var/mysql/conf:/etc/mysql/conf.d --privileged=true -p 3306:3306 -e   MYSQL_ROOT_PASSWORD=123456 -d mysql:8.0 
+```shell
+docker run --restart always \
+--name mysql  \
+-v /usr/mysql/log:/var/log/mysql \
+-v /usr/mysql/data:/var/lib/mysql \
+-v /usr/mysql/conf:/etc/mysql/conf.d \
+--privileged=true  \
+-p 3306:3306  \
+-e   MYSQL_ROOT_PASSWORD=123456  \
+-d mysql:8.0 
 ```
 
  ==--name== 为mysql的实例设置别名。 ==-p 43306==为对外暴露的端口(前面一个)。==3306==是内部端口 

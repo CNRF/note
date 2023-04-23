@@ -1,28 +1,27 @@
 ```shell
-docker pull elasticsearch:8.6.2
-docker pull kibana:8.6.2
-docker pull logstash:8.6.2
+docker pull elasticsearch:7.17.9
+docker pull kibana:7.17.9
+docker pull logstash:7.17.9
 
-mkdir /app/elasticsearch
+mkdir /usr/elasticsearch
 #启动es  如果配置低，则加命令
 docker run  \
 -d -p 9200:9200  \
 -p 9300:9300  \
--v /app/elasticsearch/plugins:/usr/share/elasticsearch/plugins  \
--v /app/elasticsearch/data:/usr/share/elasticsearch/data  \
--v /app/elasticsearch/java.policy:/usr/share/elasticsearch/jdk/conf/security/java.policy \
--v /app/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml \
+-v /usr/elasticsearch/plugins:/usr/share/elasticsearch/plugins  \
+-v /usr/elasticsearch/data:/usr/share/elasticsearch/data  \
+-v /usr/elasticsearch/java.policy:/usr/share/elasticsearch/jdk/conf/security/java.policy \
+-v /usr/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml \
 --privileged=true  \
 -e "discovery.type=single-node" \
 -e ES_JAVA_OPTS="-Xms84m -Xmx512m"  \
 --name es   \
---restart=always  \
-elasticsearch:8.6.2
+elasticsearch:7.17.9
 
 
 #将IK相关文件文件传输到挂载文件夹中/exapp/elasticsearch/plugins/ik
 #解压
-unzip  elasticsearch-analysis-ik-7.12.1.zip
+unzip  elasticsearch-analysis-ik-7.17.9.zip
 #需要将mysql驱动放到相关ik目录下mysql-connector-java-8.0.27.jar
 #重启镜像
 docker restart elasticsearch
@@ -39,9 +38,9 @@ bin/elasticsearch-users roles -a kibana_system admin
 #启动kibana
 docker run --name kibana --privileged=true \
 -p 5601:5601 \
--v /app/kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml  \
+-v /usr/kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml  \
 --restart=always  \
--d kibana:8.6.2
+-d kibana:7.17.9
 
 firewall-cmd --zone=public --add-port=9200/tcp --permanent
 firewall-cmd --zone=public --add-port=9300/tcp --permanent

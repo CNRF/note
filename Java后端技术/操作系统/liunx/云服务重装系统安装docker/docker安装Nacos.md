@@ -2,8 +2,8 @@
 
 ```shell
 docker pull nacos/nacos-server:2.0.2
-mkdir -p /app/nacos
-cd  /app/nacos
+mkdir -p /usr/nacos
+cd  /usr/nacos
 vi  custom.properties
 ```
 
@@ -18,7 +18,14 @@ management.endpoints.web.exposure.include=*
 3.启动
 
 ```shell
-docker run -d -p 8848:8848 -e MODE=standalone --privileged=true -v /app/nacos/custom.properties:/home/nacos/init.d/custom.properties -v /app/nacos/logs:/home/nacos/logs --restart always --name dockernacos nacos/nacos-server:2.0.2
+docker run -d \
+-p 8848:8848 \
+-e MODE=standalone \
+--privileged=true \
+-v /usr/nacos/custom.properties:/home/nacos/init.d/custom.properties \
+-v /usr/nacos/logs:/home/nacos/logs \
+--restart always \
+--name dnacos nacos/nacos-server:2.0.2
 
 firewall-cmd --zone=public --add-port=8848/tcp --permanent
 firewall-cmd --reload
