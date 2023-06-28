@@ -4,5 +4,5 @@ xpack.monitoring.elasticsearch.hosts: [ "http://192.168.232.128:9200" ]
 xpack.monitoring.enabled: true
 #ES中的内置账户和密码，在ES中配置
 xpack.monitoring.elasticsearch.username: admin  
-xpack.monitoring.elasticsearch.password: admin1234
+xpack.monitoring.elasticsearch.password: admin123456
 

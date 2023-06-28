@@ -45,6 +45,10 @@ docker inspect --format '{{ .NetworkSettings.IPAddress }}' 5484926c91f5
 docker exec -it b097b7b701e1  /bin/bash
 
 docker logs -f -t --tail 100 datacenter
+
+# 查看docker 代理占用的端口
+ps -aux | grep -v grep | grep docker-proxy
+
 ```
 
 ## docker基本命令
@@ -83,6 +87,8 @@ docker network ls
 #查看网络详情
 docker network inspect  网络id()
 docker network inspect fa88534c3537
+# 移除掉所有不被使用的网路
+docker network prune
 ```
 
 ## 解决办法：重建docker0网络恢复

@@ -13,6 +13,8 @@ vi ifcfg-ens33
 
 修改配置文件
 
+![image-20230429141724465](https://raw.githubusercontent.com/CNRF/noteImage/main/image/202304291417517.png)
+
 ```shell
 #修改
 BOOTPROTO=static
